@@ -1,0 +1,21 @@
+{
+  "name": "Selfgram",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/andre-cota/Selfgram",
+  "license": "MIT",
+  "author": "Andre Cota",
+  "dependencies": {
+    "express": "^4.17.3"
+  },
+  "devDependencies": {
+    "eslint": "^8.5.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "2.25.2",
+    "eslint-plugin-prettier": "^4.0.0",
+    "nodemon": "^2.0.15",
+    "prettier": "^2.5.1",
+    "sucrase": "^3.20.3"
+  }
+}
