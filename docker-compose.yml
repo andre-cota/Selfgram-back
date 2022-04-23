@@ -1,0 +1,19 @@
+version: "3.7"
+
+services:
+  database: 
+    image: postgres
+    container_name: database_selfgram
+    restart: always
+    ports: 
+      - 5432:5432
+    environment: 
+      - POSTGRES_USER=dymista
+      - POSTGRES_PASSWORD=123456
+      - POSTGRES_DB=selfgram
+    volumes: 
+      - pgdata:/data/postgres
+  
+volumes: 
+  pgdata:
+    driver: local

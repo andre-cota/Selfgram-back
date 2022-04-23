@@ -3,11 +3,12 @@ const fs = require('fs');
 const path = require('path');
 
 const config = require('../config/database');
-const sequelize = new Sequelize( 
-    config.database,
-    config.username,
-    config.password,
-    config
+
+const sequelize = new Sequelize(
+  config.database,
+  config.username,
+  config.password,
+  config,
 );
 
 const db = {};
@@ -15,10 +16,7 @@ const db = {};
 // Carrega arquivos de modelos das tabelas (Verifica todas as models)
 const modelFiles = fs
   .readdirSync(path.resolve(__dirname, '..', 'app', 'models'))
-  .filter(
-    file =>
-      file.indexOf('.') !== 0 && file.slice(-3) === '.js'
-  )
+  .filter(file => file.indexOf('.') !== 0 && file.slice(-3) === '.js')
   .map(file => path.join(__dirname, '..', 'app', 'models', file));
 
 modelFiles.forEach(file => {
